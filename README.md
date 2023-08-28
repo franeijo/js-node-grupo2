@@ -1,1 +1,4 @@
-# js-node-grupo2
+# Codo a Codo
+
+JS Node
+Grupo 2
