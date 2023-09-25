@@ -4,262 +4,260 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop | FunkoShop</title>
+    <link rel="stylesheet" href="../css/mainstyles.css">
 </head>
 <body>
     <header> <!-- Inicio Header -->
-        <nav>
-            <picture>
+        <nav class="navbar container">
+            <picture class="navbar__logo">
                 <a href="../index.html">
                     <img src="../img/branding/logo_light_horizontal.svg" alt="Logo FunkoShop">
                 </a>
             </picture>
-            <ul>
-                <li>
-                    <a href="../pages/shop.html">SHOP</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item with-submenu">
+                    <a class="navbar__link with-icon" href="../pages/shop.html">SHOP<iconify-icon class="icon-submenu" icon="tabler:chevron-down"></iconify-icon></a>
+                    <ul class="submenu">
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Funkos</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Remeras</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Llaveros</a>
+                        </li>
+                    </ul>
                 </li>
-                <li>
-                    <a href="../pages/contact.html">CONTACTO</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="../pages/contact.html">CONTACTO</a>
                 </li>
-                <li>
-                    <a href="../pages/login.html">LOGIN</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="../pages/login.html">LOGIN</a>
                 </li>
-                <li>
-                    <a href="../pages/cart.html">
+                <li class="navbar__item">
+                    <a class="navbar__cart" href="./pages/cart.html">
                         <img src="../img/icons/cart-icon.svg" alt="Icono de Carrito">
                     </a>
                 </li>
             </ul>    
         </nav>
     </header> <!-- Fin Header -->
-    <aside>
-        <section>
-            <article>
-                <h4>BUSCAR</h4>
-                <form action="">
-                    <input type="text">
-                </form>
-            </article>
-            <article>
-                <h4>ORDENAR POR</h4>
-                <form action="">
-                    <select name="" id="">
+    <main class="main-shop-container container">
+        <aside>
+            <section class="filter">
+                <article class="filter__group">
+                    <h2 class="filter__name">BUSCAR</h2>                
+                    <input class="filter__input" type="text" placeholder="item o categoria" style="width: 100%;">
+                </article>
+                <article class="filter__group">
+                    <h2 class="filter__name">ORDENAR POR</h2>
+                    <select name="" id="" class="filter__input">
                         <option value="">Mayor a menor</option>
                     </select>
-                </form>
-            </article>
-            <article>
-                <h4>PRECIO</h4>
-                <form action="">
-                    <p>MIN</p>
-                    <input type="text">
-                    <p> - MAX</p>
-                    <input type="text">
-                </form>
-            </article>
-            <article>
-                <h4>FILTRAR</h4>
-                <form action="">
-                    <input type="checkbox">
-                    <label for="">NUEVOS</label>
-                    <input type="checkbox">
-                    <label for="">OFERTAS</label>
-                    <input type="checkbox">
-                    <label for="">EDICION ESPECIAL</label>
-                    <input type="checkbox">
-                    <label for="">FAVORITOS</label>
-                </form>
-            </article>
-        </section>
-    </aside>
-    <main>
-        <section>
-            <ul>
-                <li>
-                    <article>
-                        <a href="../pages/item.html">
-                            <picture>
+                </article>
+                <article class="filter__group">
+                    <h2 class="filter__name">PRECIO</h2>
+                    <div class="minmax-group">
+                        <label class="minmax-group__text">MIN</label>
+                        <input type="text" size="6" placeholder="0" style="text-align: center; border: 1.5px solid black; border-radius: 6px;">
+                        <label class="minmax-group__text">MAX</label>
+                        <input type="text" size="6" placeholder="0" style="text-align: center; border: 1.5px solid black; border-radius: 6px;">
+                    </div>
+                </article>
+                <article class="filter__group">
+                    <h2 class="filter__name">FILTRAR</h2>
+                    <div class="checkbox-list">
+                        <div class="checkbox-list__item">
+                            <input type="checkbox">
+                            <label class="checkbox__label" for="">NUEVOS</label>
+                        </div>
+                        <div class="checkbox-list__item">
+                            <input type="checkbox">
+                            <label class="checkbox__label" for="">OFERTAS</label>
+                        </div>
+                        <div class="checkbox-list__item">
+                            <input type="checkbox">
+                            <label class="checkbox__label" for="">EDICION ESPECIAL</label>
+                        </div>
+                        <div class="checkbox-list__item">
+                            <input type="checkbox">
+                            <label class="checkbox__label" for="">FAVORITOS</label>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </aside>
+        <section class="shop">
+            <ul class="shop__items">
+                <li class="shop__item">
+                    <article class="card-item">
+                        <a class="card-item__link" href="../pages/item.html">
+                            <picture class="card-item__picture">
+                                <span class="card-item__tag">NUEVO</span>
                                 <img src="../img/star-wars/trooper-1.webp" alt="Starwars Stormtrooper">
                             </picture>
-                            <div>
-                                <p>STAR WARS</p>
-                                <h4>STORMTROOPER LIGHTSABER</h4>
-                                <p>$ 1799,99</p>
-                                <p>3 CUOTAS SIN INTERÉS</p>
+                            <div class="card-item__content">
+                                <p class="card-item__license">STAR WARS</p>
+                                <h4 class="card-item__name">STORMTROOPER LIGHTSABER</h4>
+                                <p class="card-item__price">$ 1799,99</p>
+                                <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
                             </div>
                         </a>
                     </article>
                 </li>
-                <li>
-                    <article>
-                        <a href="../pages/item.html">
-                            <picture>
+                <li class="shop__item">
+                    <article class="card-item">
+                        <a class="card-item__link" href="../pages/item.html">
+                            <picture class="card-item__picture">
+                                <span class="card-item__tag">NUEVO</span>
                                 <img src="../img/pokemon/pidgeotto-1.webp" alt="Pokemon Pidgeotto">
                             </picture>
-                            <div>
-                                <p>POKEMON</p>
-                                <h4>PIDGEOTTO</h4>
-                                <p>$ 1799,99</p>
-                                <p>3 CUOTAS SIN INTERÉS</p>
+                            <div class="card-item__content">
+                                <p class="card-item__license">POKEMON</p>
+                                <h4 class="card-item__name">PIDGEOTTO</h4>
+                                <p class="card-item__price">$ 1799,99</p>
+                                <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
                             </div>
                         </a>
                     </article>
                 </li>
-                <li>
-                    <article>
-                        <a href="../pages/item.html">
-                            <picture>
+                <li class="shop__item">
+                    <article class="card-item">
+                        <a class="card-item" href="../pages/item.html">
+                            <picture class="card-item__picture">
+                                <span class="card-item__tag">NUEVO</span>
                                 <img src="../img/harry-potter/luna-1.webp" alt="Harry Potter Luna">
                             </picture>
-                            <div>
-                                <p>HARRY POTTER</p>
-                                <h4>LUNA LOVEGOOD LION MASK</h4>
-                                <p>$ 1799,99</p>
-                                <p>3 CUOTAS SIN INTERÉS</p>
+                            <div class="card-item__content">
+                                <p class="card-item__license">HARRY POTTER</p>
+                                <h4 class="card-item__name">LUNA LOVEGOOD LION MASK</h4>
+                                <p class="card-item__price">$ 1799,99</p>
+                                <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
                             </div>
                         </a>
                     </article>
                 </li>
-                <li>
-                    <article>
-                        <a href="../pages/item.html">
-                            <picture>
+                <li class="shop__item">
+                    <article class="card-item">
+                        <a class="card-item__link" href="../pages/item.html">
+                            <picture class="card-item__picture">
+                                <span class="card-item__tag">NUEVO</span>
                                 <img src="../img/star-wars/trooper-1.webp" alt="Starwars Stormtrooper">
                             </picture>
-                            <div>
-                                <p>STAR WARS</p>
-                                <h4>STORMTROOPER LIGHTSABER</h4>
-                                <p>$ 1799,99</p>
-                                <p>3 CUOTAS SIN INTERÉS</p>
+                            <div class="card-item__content">
+                                <p class="card-item__license">STAR WARS</p>
+                                <h4 class="card-item__name">STORMTROOPER LIGHTSABER</h4>
+                                <p class="card-item__price">$ 1799,99</p>
+                                <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
                             </div>
                         </a>
                     </article>
                 </li>
-                <li>
-                    <article>
-                        <a href="../pages/item.html">
-                            <picture>
+                <li class="shop__item">
+                    <article class="card-item">
+                        <a class="card-item__link" href="../pages/item.html">
+                            <picture class="card-item__picture">
+                                <span class="card-item__tag">NUEVO</span>
                                 <img src="../img/pokemon/pidgeotto-1.webp" alt="Pokemon Pidgeotto">
                             </picture>
-                            <div>
-                                <p>POKEMON</p>
-                                <h4>PIDGEOTTO</h4>
-                                <p>$ 1799,99</p>
-                                <p>3 CUOTAS SIN INTERÉS</p>
+                            <div class="card-item__content">
+                                <p class="card-item__license">POKEMON</p>
+                                <h4 class="card-item__name">PIDGEOTTO</h4>
+                                <p class="card-item__price">$ 1799,99</p>
+                                <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
                             </div>
                         </a>
                     </article>
                 </li>
-                <li>
-                    <article>
-                        <a href="../pages/item.html">
-                            <picture>
+                <li class="shop__item">
+                    <article class="card-item">
+                        <a class="card-item" href="../pages/item.html">
+                            <picture class="card-item__picture">
+                                <span class="card-item__tag">NUEVO</span>
                                 <img src="../img/harry-potter/luna-1.webp" alt="Harry Potter Luna">
                             </picture>
-                            <div>
-                                <p>HARRY POTTER</p>
-                                <h4>LUNA LOVEGOOD LION MASK</h4>
-                                <p>$ 1799,99</p>
-                                <p>3 CUOTAS SIN INTERÉS</p>
+                            <div class="card-item__content">
+                                <p class="card-item__license">HARRY POTTER</p>
+                                <h4 class="card-item__name">LUNA LOVEGOOD LION MASK</h4>
+                                <p class="card-item__price">$ 1799,99</p>
+                                <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
                             </div>
                         </a>
                     </article>
                 </li>
-                <li>
-                    <article>
-                        <a href="../pages/item.html">
-                            <picture>
+                <li class="shop__item">
+                    <article class="card-item">
+                        <a class="card-item__link" href="../pages/item.html">
+                            <picture class="card-item__picture">
+                                <span class="card-item__tag">NUEVO</span>
                                 <img src="../img/star-wars/trooper-1.webp" alt="Starwars Stormtrooper">
                             </picture>
-                            <div>
-                                <p>STAR WARS</p>
-                                <h4>STORMTROOPER LIGHTSABER</h4>
-                                <p>$ 1799,99</p>
-                                <p>3 CUOTAS SIN INTERÉS</p>
+                            <div class="card-item__content">
+                                <p class="card-item__license">STAR WARS</p>
+                                <h4 class="card-item__name">STORMTROOPER LIGHTSABER</h4>
+                                <p class="card-item__price">$ 1799,99</p>
+                                <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
                             </div>
                         </a>
                     </article>
                 </li>
-                <li>
-                    <article>
-                        <a href="../pages/item.html">
-                            <picture>
+                <li class="shop__item">
+                    <article class="card-item">
+                        <a class="card-item__link" href="../pages/item.html">
+                            <picture class="card-item__picture">
+                                <span class="card-item__tag">NUEVO</span>
                                 <img src="../img/pokemon/pidgeotto-1.webp" alt="Pokemon Pidgeotto">
                             </picture>
-                            <div>
-                                <p>POKEMON</p>
-                                <h4>PIDGEOTTO</h4>
-                                <p>$ 1799,99</p>
-                                <p>3 CUOTAS SIN INTERÉS</p>
+                            <div class="card-item__content">
+                                <p class="card-item__license">POKEMON</p>
+                                <h4 class="card-item__name">PIDGEOTTO</h4>
+                                <p class="card-item__price">$ 1799,99</p>
+                                <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
                             </div>
                         </a>
                     </article>
                 </li>
-                <li>
-                    <article>
-                        <a href="../pages/item.html">
-                            <picture>
+                <li class="shop__item">
+                    <article class="card-item">
+                        <a class="card-item" href="../pages/item.html">
+                            <picture class="card-item__picture">
+                                <span class="card-item__tag">NUEVO</span>
                                 <img src="../img/harry-potter/luna-1.webp" alt="Harry Potter Luna">
                             </picture>
-                            <div>
-                                <p>HARRY POTTER</p>
-                                <h4>LUNA LOVEGOOD LION MASK</h4>
-                                <p>$ 1799,99</p>
-                                <p>3 CUOTAS SIN INTERÉS</p>
+                            <div class="card-item__content">
+                                <p class="card-item__license">HARRY POTTER</p>
+                                <h4 class="card-item__name">LUNA LOVEGOOD LION MASK</h4>
+                                <p class="card-item__price">$ 1799,99</p>
+                                <p class="card-item__promo">3 CUOTAS SIN INTERÉS</p>
                             </div>
                         </a>
                     </article>
                 </li>
             </ul>
-            <article>
-                <ul>
-                    <li>
-                        <a href=""> < </a>
-                    </li>
-                    <li>
-                        <a href=""> 1 </a>
-                    </li>
-                    <li>
-                        <a href=""> 2 </a>
-                    </li>
-                    <li>
-                        <a href=""> ... </a>
-                    </li>
-                    <li>
-                        <a href=""> 9 </a>
-                    </li>
-                    <li>
-                        <a href=""> 10 </a>
-                    </li>
-                    <li>
-                        <a href=""> > </a>
-                    </li>
-                </ul>
-            </article>
         </section>
     </main>
-    <footer> <!-- Inicio Footer -->
-        <section>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="../pages/shop.html">SHOP</a>
-                    </li>
-                    <li>
-                        <a href="../pages/register.html">REGISTRARSE</a>
-                    </li>
-                    <li>
-                        <a href="../pages/login.html">LOGIN</a>
-                    </li>
-                    <li>
-                        <a href="../pages/contact.html">CONTACTO</a>
-                    </li>
-                </ul>
-                <picture>
-                    <img src="../img/branding/isotype.svg" alt="Isotipo Funkoshop">
-                </picture>
-            </nav>
-        </section>
-        <p>All rights reserved 2023 - Funkoshop &copy;</p>
+    <footer class="footer"> <!-- Inicio Footer -->
+        <nav class="navbar container">
+            <ul class="navbar__item">
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/shop.html">SHOP</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/register.html">REGISTRARSE</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/login.html">LOGIN</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/contact.html">CONTACTO</a>
+                </li>
+            </ul>
+            <picture>
+                <img src="../img/branding/isotype.svg" alt="Isotipo Funkoshop">
+            </picture>
+        </nav>
+        <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
     </footer> <!-- Fin Footer -->
 </body>
 </html>
